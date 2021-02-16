@@ -89,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				52B312B625DC0C9700F537CB /* Assets.xcassets */,
+				52B312AD25DC0C9600F537CB /* AppDelegate.swift */,
 				52B312AC25DC0C9600F537CB /* Joke Book */,
 				52289EC425DC391E005B312E /* Extensions */,
 				52289EBE25DC2115005B312E /* View */,
@@ -112,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				52B312BB25DC0C9700F537CB /* Info.plist */,
-				52B312AD25DC0C9600F537CB /* AppDelegate.swift */,
 				52B312AF25DC0C9600F537CB /* SceneDelegate.swift */,
 			);
 			path = "Joke Book";

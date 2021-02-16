@@ -17,16 +17,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="svQ-R6-SQy">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="10" width="414" height="886"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="JokeCell" rowHeight="85" id="GOZ-qa-AqE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="JokeCell" rowHeight="85" id="GOZ-qa-AqE" customClass="JokeQuestionTableViewCell" customModule="Joke_Book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GOZ-qa-AqE" id="2ch-gg-W0v">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJm-E3-iWS">
+                                                    <rect key="frame" x="11" y="32.5" width="359" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="79I-WD-0Wx">
+                                                    <rect key="frame" x="380" y="32" width="25" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="VOf-iI-Ldj"/>
+                                                        <constraint firstAttribute="height" constant="25" id="z1i-I2-NZK"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="79I-WD-0Wx" secondAttribute="trailing" constant="9" id="BvY-5n-Bxo"/>
+                                                <constraint firstItem="HJm-E3-iWS" firstAttribute="leading" secondItem="2ch-gg-W0v" secondAttribute="leading" constant="11" id="N4s-ZS-8fX"/>
+                                                <constraint firstItem="HJm-E3-iWS" firstAttribute="centerY" secondItem="2ch-gg-W0v" secondAttribute="centerY" id="cWj-Wk-fhz"/>
+                                                <constraint firstItem="79I-WD-0Wx" firstAttribute="leading" secondItem="HJm-E3-iWS" secondAttribute="trailing" constant="10" id="jqV-Hm-uRd"/>
+                                                <constraint firstItem="79I-WD-0Wx" firstAttribute="centerY" secondItem="2ch-gg-W0v" secondAttribute="centerY" id="lBs-Ml-iaP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jokeQuestionLabel" destination="HJm-E3-iWS" id="ZN5-F4-4Gz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -34,10 +59,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="svQ-R6-SQy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9rG-zm-gIQ"/>
+                            <constraint firstItem="svQ-R6-SQy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9rG-zm-gIQ"/>
                             <constraint firstItem="svQ-R6-SQy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H12-AS-r3N"/>
-                            <constraint firstItem="svQ-R6-SQy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nfl-Rs-IK5"/>
-                            <constraint firstAttribute="bottom" secondItem="svQ-R6-SQy" secondAttribute="bottom" id="oXK-AL-499"/>
+                            <constraint firstItem="svQ-R6-SQy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-34" id="Nfl-Rs-IK5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="svQ-R6-SQy" secondAttribute="bottom" constant="-34" id="oXK-AL-499"/>
                         </constraints>
                     </view>
                     <connections>
@@ -50,6 +75,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

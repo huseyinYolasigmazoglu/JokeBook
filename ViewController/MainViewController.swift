@@ -34,13 +34,14 @@ class MainViewController: UIViewController {
     
 }
 
-extension MainViewController : UITableViewDelegate {
-    
-}
 
-
-extension MainViewController : UITableViewDataSource {
+extension MainViewController : UITableViewDelegate,UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 85
+    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -49,7 +50,13 @@ extension MainViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "JokeCell", for: indexPath) as? JokeQuestionTableViewCell else {
+            fatalError("JokeQuestionTableViewCell not found")
+        }
+        
+        cell.jokeQuestion = "XXXXXX YYYYYYYYYYYY ZZZZZZZZZZZZZZZ?"
+        
+        return cell
     }
     
     

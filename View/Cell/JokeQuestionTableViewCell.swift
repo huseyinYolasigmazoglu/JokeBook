@@ -8,7 +8,19 @@
 import UIKit
 
 class JokeQuestionTableViewCell: UITableViewCell {
-
+    
+    
+    @IBOutlet private weak var jokeQuestionLabel: UILabel!
+    
+    var jokeQuestion : String  = "" {
+        
+        didSet {
+            
+            jokeQuestionLabel.text = jokeQuestion
+        }
+    }
+   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
