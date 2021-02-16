@@ -20,7 +20,6 @@ class JokeBookWebService {
                 guard let jokes = jokes else {
                     return
                 }
-                
                 DispatchQueue.main.async {
                     completion(jokes)
                 }
