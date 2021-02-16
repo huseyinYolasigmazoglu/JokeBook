@@ -28,8 +28,6 @@ class Service {
             }
             
         }.resume()
-        
     }
-    
 }
 
