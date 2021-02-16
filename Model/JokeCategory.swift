@@ -12,7 +12,7 @@ struct JokeCategory {
     let title: String
     let jokes: [Joke]
     
-    static func JokeCategories() -> [String] {
+    static func allJokeCategories() -> [String] {
         return ["general","programming","knock-knock"]
     }
 }

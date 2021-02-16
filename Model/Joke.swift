@@ -20,8 +20,6 @@ extension Joke {
     
     static func decodeJokes(category:String) -> Resource<[Joke]> {
         
-        var url = URL.urlForAllJokes(for: category)
-        print(url)
         return Resource<[Joke]>(url : URL.urlForAllJokes(for: category), parse : { data in
             return try! JSONDecoder().decode([Joke].self, from: data)
         } )

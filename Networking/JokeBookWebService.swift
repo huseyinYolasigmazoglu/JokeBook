@@ -12,14 +12,19 @@ class JokeBookWebService {
     
     func getAllJokes(completion: @escaping ([Joke]) -> ()) {
         
-        Service().load(Joke.decodeJokes(category: "general")) { (jokes) in
-            //print(jokes)
+        
+        JokeCategory.allJokeCategories().forEach { (category) in
             
-            guard let jokes = jokes else {
-                return
+            Service().load(Joke.decodeJokes(category: category)) { jokes in
+                
+                guard let jokes = jokes else {
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    completion(jokes)
+                }
             }
-            
-            completion(jokes)
         }
     }
 }
