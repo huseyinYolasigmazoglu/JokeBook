@@ -11,11 +11,15 @@ import Foundation
 class JokeBookWebService {
     
     func getAllJokes(completion: @escaping ([Joke]) -> ()) {
-    
-        Service().load(Joke.decodeJokes()) { (jokes) in
+        
+        Service().load(Joke.decodeJokes(category: "general")) { (jokes) in
+            //print(jokes)
             
-            print(jokes)
-            //completion(jokes)
+            guard let jokes = jokes else {
+                return
+            }
+            
+            completion(jokes)
         }
     }
 }

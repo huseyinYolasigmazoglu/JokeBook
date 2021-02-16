@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		52289EBB25DC1F79005B312E /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52289EBA25DC1F79005B312E /* Joke.swift */; };
 		52289EC125DC2177005B312E /* JokeBookWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52289EC025DC2177005B312E /* JokeBookWebService.swift */; };
+		52289EC625DC3976005B312E /* UrlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52289EC525DC3976005B312E /* UrlExtension.swift */; };
+		52289EC925DC3A9D005B312E /* JokeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52289EC825DC3A9D005B312E /* JokeCategory.swift */; };
 		52B312AE25DC0C9600F537CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B312AD25DC0C9600F537CB /* AppDelegate.swift */; };
 		52B312B025DC0C9600F537CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B312AF25DC0C9600F537CB /* SceneDelegate.swift */; };
 		52B312B225DC0C9600F537CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B312B125DC0C9600F537CB /* MainViewController.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		52289EBA25DC1F79005B312E /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		52289EC025DC2177005B312E /* JokeBookWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeBookWebService.swift; sourceTree = "<group>"; };
+		52289EC525DC3976005B312E /* UrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtension.swift; sourceTree = "<group>"; };
+		52289EC825DC3A9D005B312E /* JokeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCategory.swift; sourceTree = "<group>"; };
 		52B312AA25DC0C9600F537CB /* Joke Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joke Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B312AD25DC0C9600F537CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B312AF25DC0C9600F537CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,10 +65,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		52289EC425DC391E005B312E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52289EC525DC3976005B312E /* UrlExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		52B312A125DC0C9500F537CB = {
 			isa = PBXGroup;
 			children = (
 				52B312AC25DC0C9600F537CB /* Joke Book */,
+				52289EC425DC391E005B312E /* Extensions */,
 				52289EBE25DC2115005B312E /* View */,
 				52B312C225DC144B00F537CB /* Networking */,
 				52B312C825DC173100F537CB /* Constants */,
@@ -115,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				52289EBA25DC1F79005B312E /* Joke.swift */,
+				52289EC825DC3A9D005B312E /* JokeCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +208,8 @@
 				52289EC125DC2177005B312E /* JokeBookWebService.swift in Sources */,
 				52289EBB25DC1F79005B312E /* Joke.swift in Sources */,
 				52B312C525DC14CC00F537CB /* Service.swift in Sources */,
+				52289EC925DC3A9D005B312E /* JokeCategory.swift in Sources */,
+				52289EC625DC3976005B312E /* UrlExtension.swift in Sources */,
 				52B312AE25DC0C9600F537CB /* AppDelegate.swift in Sources */,
 				52B312B025DC0C9600F537CB /* SceneDelegate.swift in Sources */,
 			);

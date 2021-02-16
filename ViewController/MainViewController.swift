@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
         
         JokeBookWebService().getAllJokes { [weak self] jokes in
             
-            
+            print(jokes)
         }
     }
 

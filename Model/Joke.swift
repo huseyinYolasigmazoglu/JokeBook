@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 struct Joke : Codable {
     
     let id : Int?
@@ -20,9 +18,11 @@ struct Joke : Codable {
 
 extension Joke {
     
-    static func decodeJokes() -> Resource<[Joke]> {
+    static func decodeJokes(category:String) -> Resource<[Joke]> {
         
-        return Resource<[Joke]>(url : URL(string: Constants.testUrl )! , parse : { data in
+        var url = URL.urlForAllJokes(for: category)
+        print(url)
+        return Resource<[Joke]>(url : URL.urlForAllJokes(for: category), parse : { data in
             return try! JSONDecoder().decode([Joke].self, from: data)
         } )
     }
