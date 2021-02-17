@@ -68,11 +68,28 @@
                     <navigationItem key="navigationItem" title="Jokes" id="LC2-tq-KDX"/>
                     <connections>
                         <outlet property="tableView" destination="svQ-R6-SQy" id="0Ld-Hq-Ezy"/>
+                        <segue destination="boh-up-HYv" kind="show" identifier="gotoPunchlineSegue" id="OU3-pa-hcb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="64.955357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Iy4-iL-bEG">
+            <objects>
+                <viewController id="boh-up-HYv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEV-5l-VEi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vVB-8v-JQP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JuE-Es-5d4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsi-ah-dSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hQV-cP-6uh">
