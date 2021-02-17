@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         JokeBookWebService().getAllJokes { [weak self] jokes in
             
             print(jokes[0].jokes.count)
-            print(jokes[0].jokes)
+            //print(jokes[0].jokes)
             self?.jokeCategoryListVM = JokeCategoryListViewModel(jokeCategories: jokes)
             
             self?.tableView.reloadData()
@@ -44,12 +44,12 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return jokeCategoryListVM?.numberOfSections ?? 1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 85
+        return 120
     }
     
     
@@ -62,9 +62,13 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "JokeCell", for: indexPath) as? JokeQuestionTableViewCell else {
             fatalError("JokeQuestionTableViewCell not found")
+        
         }
         
+        
         cell.jokeQuestion = jokeCategoryListVM?.jokeForSectionAtIndex(index: indexPath.row) ?? ""
+        
+        print(cell.jokeQuestion)
         
         return cell
     }
