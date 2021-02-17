@@ -18,19 +18,21 @@ class JokeBookWebService {
         
         JokeCategory.allJokeCategories().forEach { (category) in
             
-            requestCount += 1
-            
+
             Service().load(Joke.decodeJokes(category: category)) { jokes in
                 
+                requestCount += 1
+                //print(category)
                 guard let jokes = jokes else {
                     return
                 }
-                
+                                
                 let category = JokeCategory(title: category, jokes: jokes)
                 
                 jokeCategories.append(category)
                 
                 if requestCount == categoriesCount {
+   
                     DispatchQueue.main.async {
                         completion(jokeCategories)
                     }
