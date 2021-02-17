@@ -10,19 +10,32 @@ import Foundation
 
 class JokeBookWebService {
     
-    func getAllJokes(completion: @escaping ([Joke]) -> ()) {
+    func getAllJokes(completion: @escaping ([JokeCategory]) -> ()) {
         
+        var jokeCategories = [JokeCategory]()
+        var requestCount = 0
+        let categoriesCount = JokeCategory.allJokeCategories().count
         
         JokeCategory.allJokeCategories().forEach { (category) in
+            
+            requestCount += 1
             
             Service().load(Joke.decodeJokes(category: category)) { jokes in
                 
                 guard let jokes = jokes else {
                     return
                 }
-                DispatchQueue.main.async {
-                    completion(jokes)
+                
+                let category = JokeCategory(title: category, jokes: jokes)
+                
+                jokeCategories.append(category)
+                
+                if requestCount == categoriesCount {
+                    DispatchQueue.main.async {
+                        completion(jokeCategories)
+                    }
                 }
+                
             }
         }
     }
