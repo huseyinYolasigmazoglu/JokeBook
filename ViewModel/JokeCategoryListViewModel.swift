@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct JokeCategoryListViewModel {
     
@@ -27,11 +27,16 @@ struct JokeCategoryListViewModel {
     }
         
     func jokeQuestionForSectionAtIndex(section: Int,index: Int) -> String {
-        return self.jokeCategories[section].jokes[index].setup ?? ""
+        return JokeDetailViewModel(self.jokeCategories[section].jokes[index]).jokeQuesion()
     }
     
     func jokeForSectionAtIndex(section: Int,index: Int) -> Joke {
         return self.jokeCategories[section].jokes[index] 
+    }
+    
+    func containerHeight() -> CGFloat {
+        
+        return 120
     }
 }
 

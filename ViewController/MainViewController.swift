@@ -64,10 +64,10 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
         return jokeCategoryListVM?.numberOfSections ?? 1
     }
     
-  
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 120
+        return jokeCategoryListVM?.containerHeight() ?? 100
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,22 +75,11 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
         return jokeCategoryListVM?.numberOfRowsInSection(section) ?? 0
     }
     
-     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let name = self.jokeCategoryListVM?.categoryAtIndex(section) ?? ""
         
-        let screenRect = UIScreen.main.bounds
-        let headerView = UIView(frame: CGRect(x: 15, y: 0, width: screenRect.width, height: 60))
-        
-        headerView.backgroundColor = UIColor.white
-        
-        let sectionHeaderLabel = UILabel(frame: headerView.frame)
-        sectionHeaderLabel.text = name.uppercased()
-        sectionHeaderLabel.textColor = UIColor.black
-        sectionHeaderLabel.font = UIFont(name: "AvenirNextCondensed-Bold", size: 24)
-        
-        headerView.addSubview(sectionHeaderLabel)
-        return headerView
+        return UIView.viewForSectionHeader(name)
         
     }
     
@@ -98,9 +87,8 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "JokeCell", for: indexPath) as? JokeQuestionTableViewCell else {
             fatalError("JokeQuestionTableViewCell not found")
-        
+            
         }
-        
         
         cell.jokeQuestion = jokeCategoryListVM?.jokeQuestionForSectionAtIndex(section: indexPath.section, index: indexPath.row) ?? ""
         

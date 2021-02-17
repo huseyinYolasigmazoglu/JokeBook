@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="svQ-R6-SQy">
-                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="JokeCell" rowHeight="120" id="GOZ-qa-AqE" customClass="JokeQuestionTableViewCell" customModule="Joke_Book" customModuleProvider="target">
@@ -61,7 +61,7 @@
                         <constraints>
                             <constraint firstItem="svQ-R6-SQy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9rG-zm-gIQ"/>
                             <constraint firstItem="svQ-R6-SQy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H12-AS-r3N"/>
-                            <constraint firstItem="svQ-R6-SQy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Nfl-Rs-IK5"/>
+                            <constraint firstItem="svQ-R6-SQy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Nfl-Rs-IK5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="svQ-R6-SQy" secondAttribute="bottom" id="oXK-AL-499"/>
                         </constraints>
                     </view>
