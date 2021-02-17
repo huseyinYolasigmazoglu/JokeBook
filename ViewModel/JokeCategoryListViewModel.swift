@@ -14,16 +14,15 @@ struct JokeCategoryListViewModel {
     
     
     var numberOfSections: Int {
-        return 1
+        return jokeCategories.count
     }
     
-    func numberOfRowsInSection() -> Int {
-        return self.jokeCategories[0].jokes.count
+    func numberOfRowsInSection(_ section: Int) -> Int {
+        return self.jokeCategories[section].jokes.count
     }
-    
-    
-    func jokeForSectionAtIndex(index: Int) -> String {
-        return self.jokeCategories[0].jokes[index].setup ?? ""
+        
+    func jokeForSectionAtIndex(section: Int,index: Int) -> String {
+        return self.jokeCategories[section].jokes[index].setup ?? ""
     }
     
 }

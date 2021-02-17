@@ -44,18 +44,18 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
+        return jokeCategoryListVM?.numberOfSections ?? 1
     }
     
+  
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 120
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return jokeCategoryListVM?.numberOfRowsInSection() ?? 0
+        return jokeCategoryListVM?.numberOfRowsInSection(section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,9 +66,9 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
         }
         
         
-        cell.jokeQuestion = jokeCategoryListVM?.jokeForSectionAtIndex(index: indexPath.row) ?? ""
+        cell.jokeQuestion = jokeCategoryListVM?.jokeForSectionAtIndex(section: indexPath.section, index: indexPath.row) ?? ""
         
-        print(cell.jokeQuestion)
+       // print(cell.jokeQuestion)
         
         return cell
     }
