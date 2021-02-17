@@ -20,6 +20,11 @@ struct JokeCategoryListViewModel {
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.jokeCategories[section].jokes.count
     }
+    
+    func categoryAtIndex(_ section: Int) -> String {
+        
+        return self.jokeCategories[section].title
+    }
         
     func jokeForSectionAtIndex(section: Int,index: Int) -> String {
         return self.jokeCategories[section].jokes[index].setup ?? ""

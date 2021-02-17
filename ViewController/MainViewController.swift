@@ -58,6 +58,25 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
         return jokeCategoryListVM?.numberOfRowsInSection(section) ?? 0
     }
     
+     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let name = self.jokeCategoryListVM?.categoryAtIndex(section) ?? ""
+        
+        let screenRect = UIScreen.main.bounds
+        let headerView = UIView(frame: CGRect(x: 15, y: 0, width: screenRect.width, height: 60))
+        
+        headerView.backgroundColor = UIColor.white
+        
+        let sectionHeaderLabel = UILabel(frame: headerView.frame)
+        sectionHeaderLabel.text = name.uppercased()
+        sectionHeaderLabel.textColor = UIColor.black
+        sectionHeaderLabel.font = UIFont(name: "AvenirNextCondensed-Bold", size: 24)
+        
+        headerView.addSubview(sectionHeaderLabel)
+        return headerView
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "JokeCell", for: indexPath) as? JokeQuestionTableViewCell else {
