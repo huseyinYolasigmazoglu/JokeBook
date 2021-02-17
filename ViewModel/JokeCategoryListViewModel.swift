@@ -26,8 +26,12 @@ struct JokeCategoryListViewModel {
         return self.jokeCategories[section].title
     }
         
-    func jokeForSectionAtIndex(section: Int,index: Int) -> String {
+    func jokeQuestionForSectionAtIndex(section: Int,index: Int) -> String {
         return self.jokeCategories[section].jokes[index].setup ?? ""
     }
     
+    func jokeForSectionAtIndex(section: Int,index: Int) -> Joke {
+        return self.jokeCategories[section].jokes[index] 
+    }
 }
+

@@ -36,6 +36,23 @@ class MainViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let identifier = segue.identifier {
+            
+            if identifier == Constants.gotoPunchlineSegue {
+                
+                if let destinationViewController = segue.destination as? JokeDetailViewController {
+                    
+                    if let index = sender as? IndexPath {
+                        
+                        destinationViewController.joke = jokeCategoryListVM?.jokeForSectionAtIndex(section: index.section, index: index.row)
+                    }
+                }
+            }
+        }
+        
+    }
     
 }
 
@@ -85,9 +102,8 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
         }
         
         
-        cell.jokeQuestion = jokeCategoryListVM?.jokeForSectionAtIndex(section: indexPath.section, index: indexPath.row) ?? ""
+        cell.jokeQuestion = jokeCategoryListVM?.jokeQuestionForSectionAtIndex(section: indexPath.section, index: indexPath.row) ?? ""
         
-       // print(cell.jokeQuestion)
         
         return cell
     }
