@@ -11,13 +11,20 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     private var jokeCategoryListVM: JokeCategoryListViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         
         
         loadJokes()
@@ -31,6 +38,8 @@ class MainViewController: UIViewController {
             print(jokes[0].jokes.count)
             //print(jokes[0].jokes)
             self?.jokeCategoryListVM = JokeCategoryListViewModel(jokeCategories: jokes)
+            
+            self?.activityIndicator.stopAnimating()
             
             self?.tableView.reloadData()
         }

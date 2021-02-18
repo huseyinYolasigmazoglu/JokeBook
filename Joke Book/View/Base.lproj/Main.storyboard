@@ -20,6 +20,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="svQ-R6-SQy">
                                 <rect key="frame" x="0.0" y="98" width="414" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="4mk-eM-vBP">
+                                    <rect key="frame" x="0.0" y="176" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="JokeCell" rowHeight="120" id="GOZ-qa-AqE" customClass="JokeQuestionTableViewCell" customModule="Joke_Book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
@@ -70,6 +74,7 @@
                         <barButtonItem key="backBarButtonItem" title="Jokes😇" id="By6-ce-fOE"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="4mk-eM-vBP" id="Ex7-Is-lFk"/>
                         <outlet property="tableView" destination="svQ-R6-SQy" id="0Ld-Hq-Ezy"/>
                         <segue destination="boh-up-HYv" kind="show" identifier="gotoPunchlineSegue" id="OU3-pa-hcb"/>
                     </connections>

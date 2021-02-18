@@ -110,16 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				524CBAD125DE40EF00D5F571 /* README.md */,
-				52B312B625DC0C9700F537CB /* Assets.xcassets */,
-				5251341725DCF38A00A24D82 /* ViewModel */,
 				52B312AC25DC0C9600F537CB /* Joke Book */,
-				52289EC425DC391E005B312E /* Extensions */,
-				52289EBE25DC2115005B312E /* View */,
-				52B312C225DC144B00F537CB /* Networking */,
-				52B312C825DC173100F537CB /* Constants */,
-				52B312CD25DC186D00F537CB /* Model */,
-				52289EBD25DC20CD005B312E /* ViewController */,
-				52B312AB25DC0C9600F537CB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +120,7 @@
 				52B312AA25DC0C9600F537CB /* Joke Book.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		52B312AC25DC0C9600F537CB /* Joke Book */ = {
@@ -137,6 +129,15 @@
 				52B312BB25DC0C9700F537CB /* Info.plist */,
 				52B312AD25DC0C9600F537CB /* AppDelegate.swift */,
 				52B312AF25DC0C9600F537CB /* SceneDelegate.swift */,
+				52B312B625DC0C9700F537CB /* Assets.xcassets */,
+				52B312AB25DC0C9600F537CB /* Products */,
+				52289EBD25DC20CD005B312E /* ViewController */,
+				52B312CD25DC186D00F537CB /* Model */,
+				52B312C825DC173100F537CB /* Constants */,
+				52B312C225DC144B00F537CB /* Networking */,
+				52289EBE25DC2115005B312E /* View */,
+				52289EC425DC391E005B312E /* Extensions */,
+				5251341725DCF38A00A24D82 /* ViewModel */,
 			);
 			path = "Joke Book";
 			sourceTree = "<group>";
