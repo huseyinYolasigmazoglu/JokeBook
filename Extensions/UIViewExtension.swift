@@ -20,7 +20,7 @@ extension UIView {
         let sectionHeaderLabel = UILabel(frame: headerView.frame)
         sectionHeaderLabel.text = name.uppercased()
         sectionHeaderLabel.textColor = UIColor.black
-        sectionHeaderLabel.font = UIFont(name: "AvenirNextCondensed-Bold", size: 24)
+        sectionHeaderLabel.font = UIFont(name: "Arial-BoldMT", size: 24)
         
         headerView.addSubview(sectionHeaderLabel)
         return headerView
