@@ -8,7 +8,7 @@
 import UIKit
 
 class JokeDetailViewController: UIViewController {
-
+    
     @IBOutlet private weak var jokeAnswer: UILabel!
     
     private var jokeDetailVM : JokeDetailViewModel!
@@ -16,7 +16,7 @@ class JokeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configure()
     }
     
@@ -29,5 +29,5 @@ class JokeDetailViewController: UIViewController {
         }
     }
     
-
+    
 }

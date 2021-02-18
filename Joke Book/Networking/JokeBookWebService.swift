@@ -18,11 +18,10 @@ class JokeBookWebService {
         
         JokeCategory.allJokeCategories().forEach { (category) in
             
-            
             Service().load(Joke.decodeJokes(category: category)) { jokes in
                 
                 requestCount += 1
-                //print(category)
+                
                 guard let jokes = jokes else {
                     return
                 }

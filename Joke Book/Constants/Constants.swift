@@ -12,4 +12,7 @@ class Constants {
     static var testUrl : String = "https://official-joke-api.appspot.com/jokes/general/ten"
     
     static var gotoPunchlineSegue : String = "gotoPunchlineSegue"
+    
+    static var jokeCell : String = "JokeCell"
+    
 }

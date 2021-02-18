@@ -25,8 +25,6 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        
-        
         loadJokes()
         
     }
@@ -35,8 +33,6 @@ class MainViewController: UIViewController {
         
         JokeBookWebService().getAllJokes { [weak self] jokes in
             
-            print(jokes[0].jokes.count)
-            //print(jokes[0].jokes)
             self?.jokeCategoryListVM = JokeCategoryListViewModel(jokeCategories: jokes)
             
             self?.activityIndicator.stopAnimating()
@@ -94,7 +90,7 @@ extension MainViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "JokeCell", for: indexPath) as? JokeQuestionTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.jokeCell, for: indexPath) as? JokeQuestionTableViewCell else {
             fatalError("JokeQuestionTableViewCell not found")
             
         }
