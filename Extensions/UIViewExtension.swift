@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-
+    
     static func viewForSectionHeader(_ name: String) -> UIView {
         
         let screenRect = UIScreen.main.bounds
@@ -25,5 +25,5 @@ extension UIView {
         headerView.addSubview(sectionHeaderLabel)
         return headerView
     }
-
+    
 }

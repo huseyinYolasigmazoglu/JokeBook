@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dbh-pJ-DPb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Jokes-->
+        <!--🤪Jokes😇-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Joke_Book" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +66,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="svQ-R6-SQy" secondAttribute="bottom" id="oXK-AL-499"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Jokes" id="LC2-tq-KDX"/>
+                    <navigationItem key="navigationItem" title="🤪Jokes😇" id="LC2-tq-KDX">
+                        <barButtonItem key="backBarButtonItem" title="Jokes😇" id="By6-ce-fOE"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="svQ-R6-SQy" id="0Ld-Hq-Ezy"/>
                         <segue destination="boh-up-HYv" kind="show" identifier="gotoPunchlineSegue" id="OU3-pa-hcb"/>
@@ -75,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="1807.2463768115942" y="64.955357142857139"/>
         </scene>
-        <!--Answers-->
+        <!--🤪 Answers 😇-->
         <scene sceneID="Iy4-iL-bEG">
             <objects>
                 <viewController id="boh-up-HYv" customClass="JokeDetailViewController" customModule="Joke_Book" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +108,7 @@
                             <constraint firstItem="Z2E-wx-EKK" firstAttribute="top" secondItem="LTs-OV-aPJ" secondAttribute="bottom" constant="17" id="zRr-ST-Emh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Answers" id="JuE-Es-5d4"/>
+                    <navigationItem key="navigationItem" title="🤪 Answers 😇" id="JuE-Es-5d4"/>
                     <connections>
                         <outlet property="jokeAnswer" destination="Z2E-wx-EKK" id="rqz-tW-fMp"/>
                     </connections>

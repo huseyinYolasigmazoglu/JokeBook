@@ -15,6 +15,7 @@
 		524CBAC825DD8CF500D5F571 /* JokeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CBAC725DD8CF500D5F571 /* JokeDetailViewModel.swift */; };
 		524CBACB25DD91CC00D5F571 /* JokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CBACA25DD91CC00D5F571 /* JokeDetailViewController.swift */; };
 		524CBACE25DDA06500D5F571 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CBACD25DDA06500D5F571 /* UIViewExtension.swift */; };
+		524CBAD225DE40EF00D5F571 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 524CBAD125DE40EF00D5F571 /* README.md */; };
 		5251341925DCF47600A24D82 /* JokeCategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251341825DCF47600A24D82 /* JokeCategoryListViewModel.swift */; };
 		52B312AE25DC0C9600F537CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B312AD25DC0C9600F537CB /* AppDelegate.swift */; };
 		52B312B025DC0C9600F537CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B312AF25DC0C9600F537CB /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		524CBAC725DD8CF500D5F571 /* JokeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDetailViewModel.swift; sourceTree = "<group>"; };
 		524CBACA25DD91CC00D5F571 /* JokeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDetailViewController.swift; sourceTree = "<group>"; };
 		524CBACD25DDA06500D5F571 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		524CBAD125DE40EF00D5F571 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5251341825DCF47600A24D82 /* JokeCategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCategoryListViewModel.swift; sourceTree = "<group>"; };
 		52B312AA25DC0C9600F537CB /* Joke Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joke Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B312AD25DC0C9600F537CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		52B312A125DC0C9500F537CB = {
 			isa = PBXGroup;
 			children = (
+				524CBAD125DE40EF00D5F571 /* README.md */,
 				52B312B625DC0C9700F537CB /* Assets.xcassets */,
 				5251341725DCF38A00A24D82 /* ViewModel */,
 				52B312AC25DC0C9600F537CB /* Joke Book */,
@@ -223,6 +226,7 @@
 			files = (
 				52B312BA25DC0C9700F537CB /* LaunchScreen.storyboard in Resources */,
 				52B312B725DC0C9700F537CB /* Assets.xcassets in Resources */,
+				524CBAD225DE40EF00D5F571 /* README.md in Resources */,
 				52B312B525DC0C9600F537CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Joke Book/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,6 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Joke Book/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
